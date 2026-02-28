@@ -85,22 +85,22 @@ namespace ADO
 			connection.Close();
 		}
 
-		public void Update(string table, int PK_num, string field, string value)
-		{
-			string cmd = $"SELECT * FROM {table}";
-			connection.Open();
-			SqlCommand command = new SqlCommand(cmd, connection);
-			SqlDataReader reader = command.ExecuteReader();
-			bool is_finded = false;
-			int i = 0;
-			string test = "";
-			while (reader.Read() && !is_finded)
-			{
-				test = reader[i].ToString();
-				i++;
-			}
-		reader.Close();
-		connection.Close();
-		}
+		//public void Update(string table, int PK_num, string field, string value)
+		//{
+		//	string cmd = $"SELECT * FROM {table}";
+		//	connection.Open();
+		//	SqlCommand command = new SqlCommand(cmd, connection);
+		//	SqlDataReader reader = command.ExecuteReader();
+		//	bool is_finded = false;
+		//	int i = 0;
+		//	string test = "";
+		//	while (reader.Read() && !is_finded)
+		//	{
+		//		test = reader[i].ToString();
+		//		i++;
+		//	}
+		//reader.Close();
+		//connection.Close();
+		//}
 	}
 }

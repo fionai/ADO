@@ -27,7 +27,7 @@ namespace ADO
 			//connector.Insert("Directors", "6,N'Tarantino',N'Quentin'");
 			//connector.Insert("Directors", "N'Fellini',N'Federico'");
 			connector.Select("*", "Directors");
-			connector.Update("Directors", 2, "first_name", "new abstract name");
+			//connector.Update("Directors", 2, "first_name", "new abstract name");
 		}
 	}
 }
