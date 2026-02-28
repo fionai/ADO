@@ -23,6 +23,12 @@ namespace ADO
 			string cmd = $"SELECT {fields} FROM {tables}";
 			if (condition != "") cmd += $" WHERE {condition}";
 			cmd += ";";
+
+			Select(cmd);
+		}
+		public void Select(string cmd)
+		{
+		
 			connection.Open();
 			SqlCommand command = new SqlCommand(cmd, connection);
 			SqlDataReader reader = command.ExecuteReader();
@@ -39,13 +45,40 @@ namespace ADO
 			reader.Close();
 			connection.Close();
 		}
-		public void Insert(string table, string values)
+		
+		public void Insert(string cmd)
 		{
-			string cmd = $"INSERT INTO {table} VALUES ({values})";
 			connection.Open();
 			SqlCommand command = new SqlCommand (cmd, connection);
 			command.ExecuteNonQuery();
 			connection.Close();
+		}
+		public void Insert(string table, string values)
+		{
+			string cmd = $"INSERT INTO {table} VALUES ({values})";
+			Insert(cmd);
+		}
+		public object Scalar(string cmd)
+		{
+			SqlCommand command = new SqlCommand(cmd, connection);
+			connection.Open();
+			object value = command.ExecuteScalar();
+			//int value = Convert.ToInt32(command.ExecuteScalar());
+			connection.Close();
+			return value;
+		}
+		public string GetPrimaryKeyColumn(string table)
+		{
+			string cmd = $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE WHERE CONSTRAINT_NAME = (SELECT CONSTRAINT_NAME FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME=N'{table}' AND CONSTRAINT_TYPE=N'PRIMARY KEY')";
+			return (string)Scalar(cmd);
+		}
+		public int GetLastPrimaryKey(string table)
+		{
+			return  Convert.ToInt32(Scalar($"SELECT MAX({GetPrimaryKeyColumn(table)}) FROM {table}"));
+		}
+		public int GetNextPrimaryKey(string table)
+		{
+			return  GetLastPrimaryKey(table)+1;
 		}
 	}
 }
