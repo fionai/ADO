@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 using System.Data.SqlClient;
 
-namespace ADO
+namespace Connector
 {
-	internal class Connector
+	public class Connector
 	{
 		string connection_string;
 		SqlConnection connection;
@@ -35,7 +35,7 @@ namespace ADO
 			{
 				if (s_fields[i].Contains("_id")) continue;
 				string value = s_values[i].Trim();
-				condition += (value.Length > 1 && value[0] != 'N' && value[1]!= '\'') ? 
+				condition += (value.Length > 1 && value[0] != 'N' && value[1] != '\'') ?
 					$"{s_fields[i].Trim()}=N'{s_values[i].Trim()}'"
 					: $"{s_fields[i].Trim()}={s_values[i].Trim()}";
 				if (i != s_values.Length - 1) condition += " AND ";
@@ -59,7 +59,7 @@ namespace ADO
 		}
 		public void Select(string cmd)
 		{
-		
+
 			connection.Open();
 			SqlCommand command = new SqlCommand(cmd, connection);
 			SqlDataReader reader = command.ExecuteReader();
@@ -98,7 +98,7 @@ namespace ADO
 			Console.WriteLine(GetValuesFromInsert(cmd));
 			if (GetPrimaryKey(GetTableFromInsert(cmd), GetFieldFromInsert(cmd), GetValuesFromInsert(cmd)) != null) return;
 			connection.Open();
-			SqlCommand command = new SqlCommand (cmd, connection);
+			SqlCommand command = new SqlCommand(cmd, connection);
 			command.ExecuteNonQuery();
 			connection.Close();
 		}
@@ -124,11 +124,11 @@ namespace ADO
 		}
 		public int GetLastPrimaryKey(string table)
 		{
-			return  Convert.ToInt32(Scalar($"SELECT MAX({GetPrimaryKeyColumn(table)}) FROM {table}"));
+			return Convert.ToInt32(Scalar($"SELECT MAX({GetPrimaryKeyColumn(table)}) FROM {table}"));
 		}
 		public int GetNextPrimaryKey(string table)
 		{
-			return  GetLastPrimaryKey(table)+1;
+			return GetLastPrimaryKey(table) + 1;
 		}
 
 		public void Update(string cmd)
@@ -140,4 +140,3 @@ namespace ADO
 		}
 	}
 }
- 

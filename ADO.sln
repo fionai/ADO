@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36930.0 d17.14
+VisualStudioVersion = 17.14.36930.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO", "ADO\ADO.csproj", "{9A3E32D3-096E-458E-B11D-E28E20AD0558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connector", "Connector\Connector.csproj", "{7F0A8ACA-6276-481C-87F5-24C4C643D497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckConnector", "CheckConnector\CheckConnector.csproj", "{2FF580B8-D48B-4159-9B47-5296C438117F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{9A3E32D3-096E-458E-B11D-E28E20AD0558}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A3E32D3-096E-458E-B11D-E28E20AD0558}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A3E32D3-096E-458E-B11D-E28E20AD0558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F0A8ACA-6276-481C-87F5-24C4C643D497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0A8ACA-6276-481C-87F5-24C4C643D497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0A8ACA-6276-481C-87F5-24C4C643D497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0A8ACA-6276-481C-87F5-24C4C643D497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF580B8-D48B-4159-9B47-5296C438117F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF580B8-D48B-4159-9B47-5296C438117F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF580B8-D48B-4159-9B47-5296C438117F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF580B8-D48B-4159-9B47-5296C438117F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
