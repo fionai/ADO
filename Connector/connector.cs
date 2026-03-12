@@ -68,7 +68,8 @@ namespace Connector
 				//Console.WriteLine($"{reader[0]}\t{reader[1]} {reader[2]}");
 				for (int i = 0; i < reader.FieldCount; i++)
 				{
-					Console.Write(reader[i].ToString().PadRight(28));
+					if (reader[i].ToString() != "")
+						Console.Write(reader[i].ToString().PadRight(23));
 				}
 				Console.WriteLine();
 			}
@@ -76,27 +77,32 @@ namespace Connector
 			reader.Close();
 			connection.Close();
 		}
-		public string GetTableFromInsert(string cmd)
+		public string GetFromInsert(string cmd)  //вынести
 		{
 			string[] parts = cmd.Split(' ', '(', ')');
 			return parts[1];
 		}
-		public string GetFieldFromInsert(string cmd)
-		{
-			string[] parts = cmd.Split('(', ')');
-			return parts[1];
-		}
-		public string GetValuesFromInsert(string cmd)
-		{
-			string[] parts = cmd.Split('(', ')');
-			return parts[3];
-		}
+		//public string GetTableFromInsert(string cmd)  //вынести
+		//{
+		//	string[] parts = cmd.Split(' ', '(', ')');
+		//	return parts[1];
+		//}
+		//public string GetFieldFromInsert(string cmd) //вынести
+		//{
+		//	string[] parts = cmd.Split('(', ')');
+		//	return parts[1];
+		//}
+		//public string GetValuesFromInsert(string cmd) //вынести
+		//{
+		//	string[] parts = cmd.Split('(', ')');
+		//	return parts[3];
+		//}
 		public void Insert(string cmd)
 		{
-			Console.WriteLine(GetTableFromInsert(cmd));
-			Console.WriteLine(GetFieldFromInsert(cmd));
-			Console.WriteLine(GetValuesFromInsert(cmd));
-			if (GetPrimaryKey(GetTableFromInsert(cmd), GetFieldFromInsert(cmd), GetValuesFromInsert(cmd)) != null) return;
+			Console.WriteLine(GetFromInsert(cmd));
+			Console.WriteLine(GetFromInsert(cmd));
+			Console.WriteLine(GetFromInsert(cmd));
+			if (GetPrimaryKey(GetFromInsert(cmd), GetFromInsert(cmd), GetFromInsert(cmd)) != null) return;
 			connection.Open();
 			SqlCommand command = new SqlCommand(cmd, connection);
 			command.ExecuteNonQuery();
