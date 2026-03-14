@@ -77,26 +77,26 @@ namespace Connector
 			reader.Close();
 			connection.Close();
 		}
-		public string GetFromInsert(string cmd)  //вынести
-		{
-			string[] parts = cmd.Split(' ', '(', ')');
-			return parts[1];
-		}
-		//public string GetTableFromInsert(string cmd)  //вынести
+		//public string GetFromInsert(string cmd)  //вынести
 		//{
 		//	string[] parts = cmd.Split(' ', '(', ')');
 		//	return parts[1];
 		//}
-		//public string GetFieldFromInsert(string cmd) //вынести
-		//{
-		//	string[] parts = cmd.Split('(', ')');
-		//	return parts[1];
-		//}
-		//public string GetValuesFromInsert(string cmd) //вынести
-		//{
-		//	string[] parts = cmd.Split('(', ')');
-		//	return parts[3];
-		//}
+		public string GetTableFromInsert(string cmd)  //вынести
+		{
+			string[] parts = cmd.Split(' ', '(', ')');
+			return parts[1];
+		}
+		public string GetFieldFromInsert(string cmd) //вынести
+		{
+			string[] parts = cmd.Split('(', ')');
+			return parts[1];
+		}
+		public string GetValuesFromInsert(string cmd) //вынести
+		{
+			string[] parts = cmd.Split('(', ')');
+			return parts[3];
+		}
 		public void Insert(string cmd)
 		{
 			Console.WriteLine(GetFromInsert(cmd));
