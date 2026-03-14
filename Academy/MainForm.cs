@@ -8,13 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using DBtools;
+
 namespace Academy
 {
 	public partial class MainForm : Form
 	{
+		DBtools.Connector connector;
+		DBtools.Connector movies_connector;
 		public MainForm()
 		{
 			InitializeComponent();
+			connector = new DBtools.Connector("Data Source=PROBOOK\\SQLEXPRESS;Initial Catalog=SPU_411_Import;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+			dgvDirections.DataSource = connector.Select("SELECT * FROM Directions");
+			//movies_connector = new Connector("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Movies_SPU_411;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+			//dgvDirections.DataSource = movies_connector.Select("SELECT * FROM Movies");
+
+			toolStripStatusLabel.Text = $"Количество направлений обучения:{dgvDirections.RowCount-1}";
+			//toolStripStatusLabel.Text = $"Количество направлений обучения:{connector.Scalar("SELECT COUNT(*) FROM Directions")}";
 		}
 	}
 }

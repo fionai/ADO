@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckConnector", "CheckConn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy", "Academy\Academy.csproj", "{A8256017-C840-4F46-960E-E1F95C49EBB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBtools", "DBtools\DBtools.csproj", "{01551738-010C-4D36-8DED-B18C2A062A70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A8256017-C840-4F46-960E-E1F95C49EBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8256017-C840-4F46-960E-E1F95C49EBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8256017-C840-4F46-960E-E1F95C49EBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01551738-010C-4D36-8DED-B18C2A062A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01551738-010C-4D36-8DED-B18C2A062A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01551738-010C-4D36-8DED-B18C2A062A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01551738-010C-4D36-8DED-B18C2A062A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

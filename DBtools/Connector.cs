@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Resources;
 
-namespace Connector
+namespace DBtools
 {
 	public class Connector
 	{
@@ -87,32 +87,32 @@ namespace Connector
 			connection.Close();
 			return table;
 		}
-		public string GetFromInsert(string cmd)  //вынести
-		{
-			string[] parts = cmd.Split(' ', '(', ')');
-			return parts[1];
-		}
-		//public string GetTableFromInsert(string cmd)  //вынести
+		//public string GetFromInsert(string cmd)  //вынести
 		//{
 		//	string[] parts = cmd.Split(' ', '(', ')');
 		//	return parts[1];
 		//}
-		//public string GetFieldFromInsert(string cmd) //вынести
-		//{
-		//	string[] parts = cmd.Split('(', ')');
-		//	return parts[1];
-		//}
-		//public string GetValuesFromInsert(string cmd) //вынести
-		//{
-		//	string[] parts = cmd.Split('(', ')');
-		//	return parts[3];
-		//}
+		public string GetTableFromInsert(string cmd)  //вынести
+		{
+			string[] parts = cmd.Split(' ', '(', ')');
+			return parts[1];
+		}
+		public string GetFieldFromInsert(string cmd) //вынести
+		{
+			string[] parts = cmd.Split('(', ')');
+			return parts[1];
+		}
+		public string GetValuesFromInsert(string cmd) //вынести
+		{
+			string[] parts = cmd.Split('(', ')');
+			return parts[3];
+		}
 		public void Insert(string cmd)
 		{
-			Console.WriteLine(GetFromInsert(cmd));
-			Console.WriteLine(GetFromInsert(cmd));
-			Console.WriteLine(GetFromInsert(cmd));
-			if (GetPrimaryKey(GetFromInsert(cmd), GetFromInsert(cmd), GetFromInsert(cmd)) != null) return;
+			Console.WriteLine(GetTableFromInsert(cmd));
+			Console.WriteLine(GetFieldFromInsert(cmd));
+			Console.WriteLine(GetValuesFromInsert(cmd));
+			if (GetPrimaryKey(GetTableFromInsert(cmd), GetFieldFromInsert(cmd), GetValuesFromInsert(cmd)) != null) return;
 			connection.Open();
 			SqlCommand command = new SqlCommand(cmd, connection);
 			command.ExecuteNonQuery();
