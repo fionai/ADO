@@ -53,12 +53,72 @@ namespace Academy
 		public static extern bool AllocConsole();
 		private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			//DataGridView dgv = (this.GetType().GetField($"dgv{tabControl.SelectedTab.Text}").GetValue(this) as DataGridView);
-			//dgv.DataSource  = connector.Select($"SELECT * FROM {tabControl.SelectedTab.Text}");
-			//toolStripStatusLabel.Text = $"Количество записей: {dgv.RowCount - 1}";
 			int i = tabControl.SelectedIndex;
 			tables[i].DataSource = connector.Select(queries[i].ToString());
 			toolStripStatusLabel.Text = $"{statusBarSignatures[i]}: {tables[i].RowCount - 1}";
+		}
+
+		private void tbStudentsGroupF_MouseDown(object sender, MouseEventArgs e)
+	{
+			if (tbStudentsGroupF.Text == "Group filter")
+			{
+				tbStudentsGroupF.ForeColor = Color.Black;
+				tbStudentsGroupF.Text = "";
+			}
+		}
+
+		private void tbStudentsDirectionF_MouseDown(object sender, MouseEventArgs e)
+		{
+			if (tbStudentsDirectionF.Text == "Direction filter")
+			{
+				tbStudentsDirectionF.ForeColor = System.Drawing.Color.Black;
+				tbStudentsDirectionF.Text = "";
+			}
+		}
+
+		private void tbStudentsGroupF_DragEnter(object sender, DragEventArgs e) // не то
+		{
+			
+		}
+
+		private void tbStudentsGroupF_Enter(object sender, EventArgs e) // не то
+		{
+			
+		}
+
+		private void tbStudentsGroupF_KeyUp(object sender, KeyEventArgs e)
+		{
+
+			if (e.KeyData.ToString() == Keys.Enter.ToString() && tbStudentsGroupF.Text != "" && tbStudentsGroupF.Text != "Group filter")
+			{
+				Query studentsFilteredByGroup = new Query("Students,Groups,Directions",
+				"last_name,first_name,middle_name,group_name,direction_name",
+				$"[group]=group_id AND direction=direction_id AND Groups.group_name LIKE ('{tbStudentsGroupF.Text}%')");
+				tables[0].DataSource = connector.Select(studentsFilteredByGroup.ToString());
+			}
+			else if (e.KeyData.ToString() == Keys.Enter.ToString() && (tbStudentsGroupF.Text == "" || tbStudentsGroupF.Text != "Group filter"))
+			{
+				tables[0].DataSource = connector.Select(queries[0].ToString());
+				tbStudentsGroupF.Text = "Group filter";
+				tbStudentsGroupF.ForeColor = System.Drawing.Color.Gray;
+			}
+		}
+
+		private void tbStudentsDirectionF_KeyUp(object sender, KeyEventArgs e)
+		{
+			if (e.KeyData.ToString() == Keys.Enter.ToString() && tbStudentsDirectionF.Text != "" && tbStudentsDirectionF.Text != "Direction filter")
+			{
+				Query studentsFilteredByDirection = new Query("Students,Groups,Directions",
+				"last_name,first_name,middle_name,group_name,direction_name",
+				$"[group]=group_id AND direction=direction_id AND direction_name LIKE ('{tbStudentsDirectionF.Text}%')");
+				tables[0].DataSource = connector.Select(studentsFilteredByDirection.ToString());
+			}
+			else if (e.KeyData.ToString() == Keys.Enter.ToString() && (tbStudentsDirectionF.Text == "" || tbStudentsDirectionF.Text != "Direction filter"))
+			{
+				tables[0].DataSource = connector.Select(queries[0].ToString());
+				tbStudentsDirectionF.Text = "Direction filter";
+				tbStudentsDirectionF.ForeColor = System.Drawing.Color.Gray;
+			}
 		}
 	}
 }
