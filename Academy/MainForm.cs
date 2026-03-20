@@ -145,8 +145,8 @@ namespace Academy
 			else if (e.KeyData.ToString() == Keys.Enter.ToString() && (tbTeachersF.Text == "" || tbTeachersF.Text != "Фамилия"))
 			{
 				tables[4].DataSource = connector.Select(queries[4].ToString());
-				tbStudentsDirectionF.Text = "Фамилия";
-				tbStudentsDirectionF.ForeColor = System.Drawing.Color.Gray;
+				tbTeachersF.Text = "Фамилия";
+				tbTeachersF.ForeColor = System.Drawing.Color.Gray;
 			}
 		}
 	}
