@@ -44,6 +44,7 @@
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.tbStudentsDirectionF = new System.Windows.Forms.TextBox();
 			this.tbStudentsGroupF = new System.Windows.Forms.TextBox();
+			this.tbTeachersF = new System.Windows.Forms.TextBox();
 			this.tabControl.SuspendLayout();
 			this.tabPageStudents.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -186,6 +187,7 @@
 			// 
 			// tabPageTeachers
 			// 
+			this.tabPageTeachers.Controls.Add(this.tbTeachersF);
 			this.tabPageTeachers.Controls.Add(this.dgvTeachers);
 			this.tabPageTeachers.Location = new System.Drawing.Point(4, 22);
 			this.tabPageTeachers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -253,6 +255,18 @@
 			this.tbStudentsGroupF.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbStudentsGroupF_KeyUp);
 			this.tbStudentsGroupF.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tbStudentsGroupF_MouseDown);
 			// 
+			// tbTeachersF
+			// 
+			this.tbTeachersF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.tbTeachersF.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+			this.tbTeachersF.Location = new System.Drawing.Point(501, 5);
+			this.tbTeachersF.Name = "tbTeachersF";
+			this.tbTeachersF.Size = new System.Drawing.Size(100, 20);
+			this.tbTeachersF.TabIndex = 3;
+			this.tbTeachersF.Text = "Фамилия";
+			this.tbTeachersF.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbTeachersF_KeyUp);
+			this.tbTeachersF.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tbTeachersF_MouseDown);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,6 +289,7 @@
 			this.tabPageDisciplines.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvDisciplines)).EndInit();
 			this.tabPageTeachers.ResumeLayout(false);
+			this.tabPageTeachers.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvTeachers)).EndInit();
 			this.statusStrip.ResumeLayout(false);
 			this.statusStrip.PerformLayout();
@@ -300,6 +315,7 @@
 		private System.Windows.Forms.DataGridView dgvTeachers;
 		private System.Windows.Forms.TextBox tbStudentsGroupF;
 		private System.Windows.Forms.TextBox tbStudentsDirectionF;
+		private System.Windows.Forms.TextBox tbTeachersF;
 	}
 }
 
