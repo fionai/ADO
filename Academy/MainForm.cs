@@ -16,7 +16,6 @@ namespace Academy
 	public partial class MainForm : Form
 	{
 	
-		DataGridView[] tables = null;
 		Query[] queries =
 		{
 			new Query("Students,Groups,Directions",
@@ -40,6 +39,11 @@ namespace Academy
 		
 		DBtools.Connector connector;
 		DBtools.Connector movies_connector;
+
+		DataGridView[] tables = null;
+
+		Dictionary<string, int> d_directions = null;
+		Dictionary<string, Dictionary<string, int>> d_trees = null;
 		public MainForm()
 		{
 
@@ -48,9 +52,32 @@ namespace Academy
 			AllocConsole();
 			connector = new DBtools.Connector("Data Source=PROBOOK\\SQLEXPRESS;Initial Catalog=SPU_411_Import;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 			tabControl_SelectedIndexChanged(tabControl, null);
+
+			d_trees = new Dictionary<string, Dictionary<string, int>>();
+			d_trees.Add(nameof(d_directions), d_directions);
+			LoadDataToComboBox(cbGroupsDirection);
+			LoadDataToComboBox(cbStudentsGroup);
+			LoadDataToComboBox(cbStudentsDirection);
+			LoadDataToComboBox(cbDisciplinesDirection);
 		}
 		[DllImport("kernel32.dll")]
 		public static extern bool AllocConsole();
+		void LoadDataToComboBox(ComboBox comboBox)
+		{
+			string table = comboBox.Name.Substring(Array.FindLastIndex<char>(comboBox.Name.ToCharArray(), Char.IsUpper))+"s";
+			string dictionary_name = $"d_{table}".ToLower();
+			Console.WriteLine("==============");
+			Console.WriteLine(table);
+			Console.WriteLine(dictionary_name);
+			//1
+			//d_directions = connector.LoadDictionary(table);
+			d_trees[dictionary_name] = connector.LoadDictionary(table);
+			foreach(KeyValuePair<string, int> i in d_trees[dictionary_name])
+			{
+				comboBox.Items.Add(i.Key);
+			}
+		}
+
 		private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			//DataGridView dgv = (this.GetType().GetField($"dgv{tabControl.SelectedTab.Text}").GetValue(this) as DataGridView);
