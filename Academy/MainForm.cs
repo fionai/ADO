@@ -87,5 +87,11 @@ namespace Academy
 			tables[i].DataSource = connector.Select(queries[i].ToString());
 			toolStripStatusLabel.Text = $"{statusBarSignatures[i]}: {tables[i].RowCount - 1}";
 		}
+
+		private void cbGroupsDirection_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (cbGroupsDirection.SelectedIndex != -1)
+			tables[1].DataSource = connector.Select(queries[1].ToString() + $" AND direction={d_trees["d_directions"][cbGroupsDirection.SelectedItem.ToString()]}");
+		}
 	}
 }
