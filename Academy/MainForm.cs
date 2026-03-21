@@ -94,7 +94,7 @@ namespace Academy
 				tbStudentsGroupF.ForeColor = Color.Black;
 				Query studentsFilteredByGroup = new Query("Students,Groups,Directions",
 				"last_name,first_name,middle_name,group_name,direction_name",
-				$"[group]=group_id AND direction=direction_id AND Groups.group_name LIKE ('{tbStudentsGroupF.Text}%')");
+				$"[group]=group_id AND direction=direction_id AND Groups.group_name LIKE ('%{tbStudentsGroupF.Text}%')");
 				tables[0].DataSource = connector.Select(studentsFilteredByGroup.ToString());
 			}
 			else if (e.KeyData.ToString() == Keys.Enter.ToString() && (tbStudentsGroupF.Text == "" || tbStudentsGroupF.Text != "Group filter"))
@@ -112,7 +112,7 @@ namespace Academy
 				tbStudentsDirectionF.ForeColor = Color.Black;
 				Query studentsFilteredByDirection = new Query("Students,Groups,Directions",
 				"last_name,first_name,middle_name,group_name,direction_name",
-				$"[group]=group_id AND direction=direction_id AND direction_name LIKE ('{tbStudentsDirectionF.Text}%')");
+				$"[group]=group_id AND direction=direction_id AND direction_name LIKE ('%{tbStudentsDirectionF.Text}%')");
 				tables[0].DataSource = connector.Select(studentsFilteredByDirection.ToString());
 			}
 			else if (e.KeyData.ToString() == Keys.Enter.ToString() && (tbStudentsDirectionF.Text == "" || tbStudentsDirectionF.Text != "Direction filter"))
@@ -138,7 +138,7 @@ namespace Academy
 			{
 				tbTeachersF.ForeColor = Color.Black;
 				Query disciplinesViewedByTeacher = new Query("Disciplines, TeachersDisciplinesRelation, Teachers", 
-				"discipline_name",
+				"last_name, first_name, middle_name, discipline_name",
 				$" teacher_id = teacher AND discipline_id = discipline  AND last_name LIKE ('{tbTeachersF.Text}%')");
 				tables[4].DataSource = connector.Select(disciplinesViewedByTeacher.ToString());
 			}
@@ -149,5 +149,6 @@ namespace Academy
 				tbTeachersF.ForeColor = System.Drawing.Color.Gray;
 			}
 		}
+
 	}
 }
