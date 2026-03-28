@@ -93,5 +93,15 @@ namespace Academy
 			if (cbGroupsDirection.SelectedIndex != -1)
 			tables[1].DataSource = connector.Select(queries[1].ToString() + $" AND direction={d_trees["d_directions"][cbGroupsDirection.SelectedItem.ToString()]}");
 		}
+
+		private void cbStudentsDirection_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			cbStudentsGroup.Items.Clear();
+			d_trees["d_groups"] = connector.LoadDictionary("Groups", $"direction={d_trees["d_directions"][cbStudentsDirection.SelectedItem.ToString()]}");
+			cbStudentsGroup.Items.AddRange(d_trees["d_groups"].Keys.ToArray());
+			//cbStudentsDirection.Items.Clear();
+			dgvStudents.DataSource = 
+				connector.Select(queries[0].ToString() + $" AND direction={d_trees["d_directions"][cbStudentsDirection.SelectedItem.ToString()]}");
+		}
 	}
 }
