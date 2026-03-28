@@ -102,6 +102,13 @@ namespace Academy
 			//cbStudentsDirection.Items.Clear();
 			dgvStudents.DataSource = 
 				connector.Select(queries[0].ToString() + $" AND direction={d_trees["d_directions"][cbStudentsDirection.SelectedItem.ToString()]}");
+			toolStripStatusLabel.Text = $"{statusBarSignatures[0]}: {dgvStudents.RowCount - 1}";
+		}
+
+		private void cbStudentsGroup_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			dgvStudents.DataSource = connector.Select(queries[0].ToString() + $" AND [group]={d_trees["d_groups"][cbStudentsGroup.SelectedItem.ToString()]}");
+			toolStripStatusLabel.Text = $"{statusBarSignatures[0]}: {dgvStudents.RowCount - 1}";
 		}
 	}
 }
