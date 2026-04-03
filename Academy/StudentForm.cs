@@ -90,16 +90,7 @@ namespace Academy
 
 		private void cbStudentsGroup_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			//cbStudentsGroup.Items.Clear();
 
-
-			//DBtools.Connector connector = new DBtools.Connector(ConfigurationManager.ConnectionStrings["SPU_411_Import"].ConnectionString);
-			//cbStudentsGroup.DataSource = (connector.Select("group_name", "Groups"));
-			//.DataSource = connector.Select("group_name", "Groups");
-
-			//toolStripStatusLabel.Text = $"{statusBarSignatures[0]}: {dgvStudents.RowCount - 1}";
-			//dgvStudents.DataSource = connector.Select("group_name", "Groups");
-			//toolStripStatusLabel.Text = $"{statusBarSignatures[0]}: {dgvStudents.RowCount - 1}";
 		}
 
 		private void cbStudentsGroup_Click(object sender, EventArgs e)
