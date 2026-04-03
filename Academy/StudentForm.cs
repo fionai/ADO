@@ -81,6 +81,7 @@ namespace Academy
 
 
 			DBtools.Connector connector = new DBtools.Connector(ConfigurationManager.ConnectionStrings["SPU_411_Import"].ConnectionString);
+			//object primary_key = connector.GetGroup_id(cbStudentsGroup.Text.Trim(' '));
 			connector.Insert($"INSERT Students(last_name,first_name,middle_name,birth_date,[group]) " +
 				$"VALUES (N'{rtbLastNAme.Text}',N'{rtbFirstName.Text}',N'{rtbMiddleNAme.Text}',N'{dtpBirthDate.Value.ToString("yyyy-MM-dd")}',{primary_key})");
 				//$"VALUES (N'{rtbLastNAme.Text}',N'{rtbFirstName.Text}',N'{rtbMiddleNAme.Text}',N'{dtpBirthDate.Value.ToString("yyyy-MM-dd")}',N'{cbStudentsGroup.Text.Trim(' ')}')");

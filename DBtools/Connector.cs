@@ -177,5 +177,16 @@ namespace DBtools
 
 			return dictionary;
 		}
+
+		public object GetGroup_id(string group_name)
+		{
+			string cmd = $"SELECT group_id FROM Groups WHERE group_name='{group_name}'";
+			SqlCommand command = new SqlCommand(cmd, connection);
+			connection.Open();
+			object primary_key = command.ExecuteScalar();
+
+			connection.Close();
+			return primary_key;
+		}
 	}
 }
