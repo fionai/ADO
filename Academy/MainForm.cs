@@ -39,7 +39,7 @@ namespace Academy
 		};
 		
 		DBtools.Connector connector;
-		DBtools.Connector movies_connector;
+//		DBtools.Connector movies_connector;
 
 		DataGridView[] tables = null;
 

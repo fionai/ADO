@@ -57,6 +57,7 @@
 			// 
 			// cbStudentsGroup
 			// 
+			this.cbStudentsGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbStudentsGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
 			this.cbStudentsGroup.FormattingEnabled = true;
 			this.cbStudentsGroup.Location = new System.Drawing.Point(298, 282);
@@ -64,6 +65,8 @@
 			this.cbStudentsGroup.Name = "cbStudentsGroup";
 			this.cbStudentsGroup.Size = new System.Drawing.Size(344, 45);
 			this.cbStudentsGroup.TabIndex = 12;
+			this.cbStudentsGroup.SelectedIndexChanged += new System.EventHandler(this.cbStudentsGroup_SelectedIndexChanged);
+			this.cbStudentsGroup.Click += new System.EventHandler(this.cbStudentsGroup_Click);
 			// 
 			// buttonOK
 			// 
@@ -100,6 +103,10 @@
 			this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
 			this.Name = "StudentForm";
 			this.Text = "Student";
+			this.Controls.SetChildIndex(this.rtbLastNAme, 0);
+			this.Controls.SetChildIndex(this.rtbFirstName, 0);
+			this.Controls.SetChildIndex(this.rtbMiddleNAme, 0);
+			this.Controls.SetChildIndex(this.dtpBirthDate, 0);
 			this.Controls.SetChildIndex(this.label2BirthDate, 0);
 			this.Controls.SetChildIndex(this.pictureBoxPhoto, 0);
 			this.Controls.SetChildIndex(this.buttonPhoto, 0);
@@ -119,5 +126,14 @@
 		private System.Windows.Forms.ComboBox cbStudentsGroup;
 		private System.Windows.Forms.Button buttonOK;
 		private System.Windows.Forms.Button buttonCancwl;
+
+		///////////////////////
+		private System.Windows.Forms.DataGridView dgvDirections;
+		private System.Windows.Forms.DataGridView dgvStudents;
+		private System.Windows.Forms.DataGridView dgvGroups;
+		private System.Windows.Forms.DataGridView dgvDisciplines;
+		private System.Windows.Forms.DataGridView dgvTeachers;
+
+		//////////////////////////
 	}
 }
