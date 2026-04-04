@@ -64,9 +64,9 @@
 			this.labelID.Location = new System.Drawing.Point(238, 14);
 			this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.labelID.Name = "labelID";
-			this.labelID.Size = new System.Drawing.Size(48, 37);
+			this.labelID.Size = new System.Drawing.Size(86, 56);
 			this.labelID.TabIndex = 1;
-			this.labelID.Text = "ID";
+			this.labelID.Text = "ID:";
 			// 
 			// labelFirstNAme
 			// 
@@ -243,7 +243,6 @@
 		#endregion
 
 		private System.Windows.Forms.Label labelLastNAme;
-		private System.Windows.Forms.Label labelID;
 		private System.Windows.Forms.Label labelFirstNAme;
 		private System.Windows.Forms.Label labelMiddleNAme;
 		protected System.Windows.Forms.Label label2BirthDate;
@@ -257,5 +256,6 @@
 		protected System.Windows.Forms.RichTextBox rtbPhone;
 		protected System.Windows.Forms.Label labelEmail;
 		protected System.Windows.Forms.Label labelPhone;
+		protected System.Windows.Forms.Label labelID;
 	}
 }

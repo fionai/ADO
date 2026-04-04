@@ -33,5 +33,9 @@ namespace Academy.Models
 		{
 			return $"last_name=N'{last_name}' AND first_name=N'{first_name}' AND middle_name=N'{middle_name}' AND birth_date=N'{birth_date}'";
 		}
+		public override string ToStringUpdate()
+		{
+			return base.ToStringUpdate()+$",[group]={group}";
+		}
 	}
 }

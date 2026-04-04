@@ -42,6 +42,7 @@
 			// 
 			// pictureBoxPhoto
 			// 
+			this.pictureBoxPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.pictureBoxPhoto.Size = new System.Drawing.Size(233, 313);
 			// 
 			// rtbEmail
@@ -50,7 +51,7 @@
 			// 
 			// rtbPhone
 			// 
-			this.rtbPhone.Location = new System.Drawing.Point(298, 401);
+			this.rtbPhone.Location = new System.Drawing.Point(296, 347);
 			// 
 			// labelEmail
 			// 
@@ -58,13 +59,17 @@
 			// 
 			// labelPhone
 			// 
-			this.labelPhone.Location = new System.Drawing.Point(145, 402);
+			this.labelPhone.Location = new System.Drawing.Point(143, 348);
+			// 
+			// labelID
+			// 
+			this.labelID.Location = new System.Drawing.Point(34, 571);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.label1.Location = new System.Drawing.Point(165, 350);
+			this.label1.Location = new System.Drawing.Point(170, 418);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(114, 37);
@@ -76,7 +81,7 @@
 			this.cbStudentsGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbStudentsGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
 			this.cbStudentsGroup.FormattingEnabled = true;
-			this.cbStudentsGroup.Location = new System.Drawing.Point(298, 346);
+			this.cbStudentsGroup.Location = new System.Drawing.Point(303, 414);
 			this.cbStudentsGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.cbStudentsGroup.Name = "cbStudentsGroup";
 			this.cbStudentsGroup.Size = new System.Drawing.Size(344, 45);
@@ -117,6 +122,7 @@
 			this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
 			this.Name = "StudentForm";
 			this.Text = "Student";
+			this.Controls.SetChildIndex(this.labelID, 0);
 			this.Controls.SetChildIndex(this.rtbEmail, 0);
 			this.Controls.SetChildIndex(this.rtbPhone, 0);
 			this.Controls.SetChildIndex(this.labelEmail, 0);
