@@ -16,5 +16,6 @@ namespace Academy
 		{
 			InitializeComponent();
 		}
+
 	}
 }

@@ -44,11 +44,27 @@
 			// 
 			this.pictureBoxPhoto.Size = new System.Drawing.Size(233, 313);
 			// 
+			// rtbEmail
+			// 
+			this.rtbEmail.Location = new System.Drawing.Point(298, 289);
+			// 
+			// rtbPhone
+			// 
+			this.rtbPhone.Location = new System.Drawing.Point(298, 401);
+			// 
+			// labelEmail
+			// 
+			this.labelEmail.Location = new System.Drawing.Point(191, 289);
+			// 
+			// labelPhone
+			// 
+			this.labelPhone.Location = new System.Drawing.Point(145, 402);
+			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.label1.Location = new System.Drawing.Point(165, 286);
+			this.label1.Location = new System.Drawing.Point(165, 350);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(114, 37);
@@ -57,9 +73,10 @@
 			// 
 			// cbStudentsGroup
 			// 
+			this.cbStudentsGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbStudentsGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
 			this.cbStudentsGroup.FormattingEnabled = true;
-			this.cbStudentsGroup.Location = new System.Drawing.Point(298, 282);
+			this.cbStudentsGroup.Location = new System.Drawing.Point(298, 346);
 			this.cbStudentsGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.cbStudentsGroup.Name = "cbStudentsGroup";
 			this.cbStudentsGroup.Size = new System.Drawing.Size(344, 45);
@@ -69,7 +86,7 @@
 			// 
 			this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.buttonOK.Location = new System.Drawing.Point(441, 419);
+			this.buttonOK.Location = new System.Drawing.Point(441, 560);
 			this.buttonOK.Name = "buttonOK";
 			this.buttonOK.Size = new System.Drawing.Size(233, 48);
 			this.buttonOK.TabIndex = 13;
@@ -81,7 +98,7 @@
 			// 
 			this.buttonCancwl.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.buttonCancwl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.buttonCancwl.Location = new System.Drawing.Point(680, 419);
+			this.buttonCancwl.Location = new System.Drawing.Point(680, 560);
 			this.buttonCancwl.Name = "buttonCancwl";
 			this.buttonCancwl.Size = new System.Drawing.Size(233, 48);
 			this.buttonCancwl.TabIndex = 14;
@@ -92,7 +109,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(949, 500);
+			this.ClientSize = new System.Drawing.Size(949, 636);
 			this.Controls.Add(this.buttonCancwl);
 			this.Controls.Add(this.buttonOK);
 			this.Controls.Add(this.cbStudentsGroup);
@@ -100,6 +117,14 @@
 			this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
 			this.Name = "StudentForm";
 			this.Text = "Student";
+			this.Controls.SetChildIndex(this.rtbEmail, 0);
+			this.Controls.SetChildIndex(this.rtbPhone, 0);
+			this.Controls.SetChildIndex(this.labelEmail, 0);
+			this.Controls.SetChildIndex(this.labelPhone, 0);
+			this.Controls.SetChildIndex(this.rtbLastNAme, 0);
+			this.Controls.SetChildIndex(this.rtbFirstName, 0);
+			this.Controls.SetChildIndex(this.rtbMiddleNAme, 0);
+			this.Controls.SetChildIndex(this.dtpBirthDate, 0);
 			this.Controls.SetChildIndex(this.label2BirthDate, 0);
 			this.Controls.SetChildIndex(this.pictureBoxPhoto, 0);
 			this.Controls.SetChildIndex(this.buttonPhoto, 0);
