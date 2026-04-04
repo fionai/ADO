@@ -150,6 +150,7 @@
 			this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.pictureBoxPhoto.Name = "pictureBoxPhoto";
 			this.pictureBoxPhoto.Size = new System.Drawing.Size(327, 389);
+			this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBoxPhoto.TabIndex = 9;
 			this.pictureBoxPhoto.TabStop = false;
 			// 
@@ -163,6 +164,7 @@
 			this.buttonPhoto.TabIndex = 10;
 			this.buttonPhoto.Text = "Обзор";
 			this.buttonPhoto.UseVisualStyleBackColor = true;
+			this.buttonPhoto.Click += new System.EventHandler(this.buttonPhoto_Click);
 			// 
 			// rtbEmail
 			// 
@@ -186,24 +188,24 @@
 			this.rtbPhone.TabIndex = 12;
 			this.rtbPhone.Text = "";
 			// 
-			// label1
+			// labelEmail
 			// 
 			this.labelEmail.AutoSize = true;
 			this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
 			this.labelEmail.Location = new System.Drawing.Point(191, 266);
 			this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.labelEmail.Name = "label1";
+			this.labelEmail.Name = "labelEmail";
 			this.labelEmail.Size = new System.Drawing.Size(93, 37);
 			this.labelEmail.TabIndex = 13;
 			this.labelEmail.Text = "email";
 			// 
-			// label2
+			// labelPhone
 			// 
 			this.labelPhone.AutoSize = true;
 			this.labelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
 			this.labelPhone.Location = new System.Drawing.Point(145, 315);
 			this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.labelPhone.Name = "label2";
+			this.labelPhone.Name = "labelPhone";
 			this.labelPhone.Size = new System.Drawing.Size(141, 37);
 			this.labelPhone.TabIndex = 14;
 			this.labelPhone.Text = "Телефон";

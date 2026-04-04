@@ -42,6 +42,9 @@ namespace Academy
 				Convert.ToInt32(cbStudentsGroup.SelectedValue)
 				);
 			DataBase.Connector.Insert($"INSERT Students({student.GetNames()}) VALUES ({student})");
+			student.id = (int)DataBase.Connector.Scalar($"SELECT stud_id FROM Students WHERE {student.GetCondition()}");
+			DataBase.Connector.UploadPhoto(student.SerializePhoto(), student.id, "photo", "Students");
+
 			//DBtools.Connector connector = new DBtools.Connector(ConfigurationManager.ConnectionStrings["SPU_411_Import"].ConnectionString);
 			//connector.Insert("Students", $"N'{rtbLastNAme.Text}',N'{rtbFirstName.Text}',N'{rtbMiddleNAme.Text}',N'{dtpBirthDate.Value.ToString("yyyy-MM-dd")}',N'',N'',N'',{1}");
 			//DataBase.Connector.Insert($"INSERT Students(last_name,first_name,middle_name,birth_date,[group]) " +
