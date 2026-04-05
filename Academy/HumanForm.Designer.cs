@@ -50,10 +50,9 @@
 			// 
 			this.labelLastNAme.AutoSize = true;
 			this.labelLastNAme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.labelLastNAme.Location = new System.Drawing.Point(128, 68);
-			this.labelLastNAme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.labelLastNAme.Location = new System.Drawing.Point(85, 12);
 			this.labelLastNAme.Name = "labelLastNAme";
-			this.labelLastNAme.Size = new System.Drawing.Size(144, 37);
+			this.labelLastNAme.Size = new System.Drawing.Size(108, 26);
 			this.labelLastNAme.TabIndex = 0;
 			this.labelLastNAme.Text = "Фамилия";
 			// 
@@ -61,10 +60,9 @@
 			// 
 			this.labelID.AutoSize = true;
 			this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.labelID.Location = new System.Drawing.Point(238, 14);
-			this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.labelID.Location = new System.Drawing.Point(23, 299);
 			this.labelID.Name = "labelID";
-			this.labelID.Size = new System.Drawing.Size(86, 56);
+			this.labelID.Size = new System.Drawing.Size(40, 26);
 			this.labelID.TabIndex = 1;
 			this.labelID.Text = "ID:";
 			// 
@@ -72,10 +70,9 @@
 			// 
 			this.labelFirstNAme.AutoSize = true;
 			this.labelFirstNAme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.labelFirstNAme.Location = new System.Drawing.Point(206, 122);
-			this.labelFirstNAme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.labelFirstNAme.Location = new System.Drawing.Point(140, 50);
 			this.labelFirstNAme.Name = "labelFirstNAme";
-			this.labelFirstNAme.Size = new System.Drawing.Size(78, 37);
+			this.labelFirstNAme.Size = new System.Drawing.Size(56, 26);
 			this.labelFirstNAme.TabIndex = 2;
 			this.labelFirstNAme.Text = "Имя";
 			// 
@@ -83,10 +80,9 @@
 			// 
 			this.labelMiddleNAme.AutoSize = true;
 			this.labelMiddleNAme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.labelMiddleNAme.Location = new System.Drawing.Point(128, 175);
-			this.labelMiddleNAme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.labelMiddleNAme.Location = new System.Drawing.Point(85, 88);
 			this.labelMiddleNAme.Name = "labelMiddleNAme";
-			this.labelMiddleNAme.Size = new System.Drawing.Size(151, 37);
+			this.labelMiddleNAme.Size = new System.Drawing.Size(108, 26);
 			this.labelMiddleNAme.TabIndex = 3;
 			this.labelMiddleNAme.Text = "Отчество";
 			// 
@@ -94,43 +90,39 @@
 			// 
 			this.label2BirthDate.AutoSize = true;
 			this.label2BirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.label2BirthDate.Location = new System.Drawing.Point(34, 229);
-			this.label2BirthDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label2BirthDate.Location = new System.Drawing.Point(23, 126);
 			this.label2BirthDate.Name = "label2BirthDate";
-			this.label2BirthDate.Size = new System.Drawing.Size(237, 37);
+			this.label2BirthDate.Size = new System.Drawing.Size(170, 26);
 			this.label2BirthDate.TabIndex = 4;
 			this.label2BirthDate.Text = "Дата рождения";
 			// 
 			// rtbLastNAme
 			// 
 			this.rtbLastNAme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.rtbLastNAme.Location = new System.Drawing.Point(298, 66);
-			this.rtbLastNAme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.rtbLastNAme.Location = new System.Drawing.Point(202, 12);
 			this.rtbLastNAme.Multiline = false;
 			this.rtbLastNAme.Name = "rtbLastNAme";
-			this.rtbLastNAme.Size = new System.Drawing.Size(344, 38);
+			this.rtbLastNAme.Size = new System.Drawing.Size(231, 26);
 			this.rtbLastNAme.TabIndex = 5;
 			this.rtbLastNAme.Text = "";
 			// 
 			// rtbFirstName
 			// 
 			this.rtbFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.rtbFirstName.Location = new System.Drawing.Point(298, 118);
-			this.rtbFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.rtbFirstName.Location = new System.Drawing.Point(202, 49);
 			this.rtbFirstName.Multiline = false;
 			this.rtbFirstName.Name = "rtbFirstName";
-			this.rtbFirstName.Size = new System.Drawing.Size(344, 38);
+			this.rtbFirstName.Size = new System.Drawing.Size(231, 26);
 			this.rtbFirstName.TabIndex = 6;
 			this.rtbFirstName.Text = "";
 			// 
 			// rtbMiddleNAme
 			// 
 			this.rtbMiddleNAme.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.rtbMiddleNAme.Location = new System.Drawing.Point(298, 171);
-			this.rtbMiddleNAme.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.rtbMiddleNAme.Location = new System.Drawing.Point(202, 86);
 			this.rtbMiddleNAme.Multiline = false;
 			this.rtbMiddleNAme.Name = "rtbMiddleNAme";
-			this.rtbMiddleNAme.Size = new System.Drawing.Size(344, 38);
+			this.rtbMiddleNAme.Size = new System.Drawing.Size(231, 26);
 			this.rtbMiddleNAme.TabIndex = 7;
 			this.rtbMiddleNAme.Text = "";
 			// 
@@ -138,18 +130,16 @@
 			// 
 			this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
 			this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpBirthDate.Location = new System.Drawing.Point(298, 223);
-			this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.dtpBirthDate.Location = new System.Drawing.Point(202, 123);
 			this.dtpBirthDate.Name = "dtpBirthDate";
-			this.dtpBirthDate.Size = new System.Drawing.Size(344, 44);
+			this.dtpBirthDate.Size = new System.Drawing.Size(231, 32);
 			this.dtpBirthDate.TabIndex = 8;
 			// 
 			// pictureBoxPhoto
 			// 
-			this.pictureBoxPhoto.Location = new System.Drawing.Point(680, 14);
-			this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.pictureBoxPhoto.Location = new System.Drawing.Point(453, 9);
 			this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-			this.pictureBoxPhoto.Size = new System.Drawing.Size(327, 389);
+			this.pictureBoxPhoto.Size = new System.Drawing.Size(218, 253);
 			this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBoxPhoto.TabIndex = 9;
 			this.pictureBoxPhoto.TabStop = false;
@@ -157,10 +147,9 @@
 			// buttonPhoto
 			// 
 			this.buttonPhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.buttonPhoto.Location = new System.Drawing.Point(680, 412);
-			this.buttonPhoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.buttonPhoto.Location = new System.Drawing.Point(453, 268);
 			this.buttonPhoto.Name = "buttonPhoto";
-			this.buttonPhoto.Size = new System.Drawing.Size(327, 58);
+			this.buttonPhoto.Size = new System.Drawing.Size(218, 38);
 			this.buttonPhoto.TabIndex = 10;
 			this.buttonPhoto.Text = "Обзор";
 			this.buttonPhoto.UseVisualStyleBackColor = true;
@@ -169,22 +158,20 @@
 			// rtbEmail
 			// 
 			this.rtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.rtbEmail.Location = new System.Drawing.Point(298, 266);
-			this.rtbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.rtbEmail.Location = new System.Drawing.Point(202, 166);
 			this.rtbEmail.Multiline = false;
 			this.rtbEmail.Name = "rtbEmail";
-			this.rtbEmail.Size = new System.Drawing.Size(344, 38);
+			this.rtbEmail.Size = new System.Drawing.Size(231, 26);
 			this.rtbEmail.TabIndex = 11;
 			this.rtbEmail.Text = "";
 			// 
 			// rtbPhone
 			// 
 			this.rtbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.rtbPhone.Location = new System.Drawing.Point(298, 314);
-			this.rtbPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.rtbPhone.Location = new System.Drawing.Point(202, 203);
 			this.rtbPhone.Multiline = false;
 			this.rtbPhone.Name = "rtbPhone";
-			this.rtbPhone.Size = new System.Drawing.Size(344, 38);
+			this.rtbPhone.Size = new System.Drawing.Size(231, 26);
 			this.rtbPhone.TabIndex = 12;
 			this.rtbPhone.Text = "";
 			// 
@@ -192,10 +179,9 @@
 			// 
 			this.labelEmail.AutoSize = true;
 			this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.labelEmail.Location = new System.Drawing.Point(191, 266);
-			this.labelEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.labelEmail.Location = new System.Drawing.Point(128, 164);
 			this.labelEmail.Name = "labelEmail";
-			this.labelEmail.Size = new System.Drawing.Size(93, 37);
+			this.labelEmail.Size = new System.Drawing.Size(65, 26);
 			this.labelEmail.TabIndex = 13;
 			this.labelEmail.Text = "email";
 			// 
@@ -203,18 +189,17 @@
 			// 
 			this.labelPhone.AutoSize = true;
 			this.labelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.labelPhone.Location = new System.Drawing.Point(145, 315);
-			this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.labelPhone.Location = new System.Drawing.Point(92, 202);
 			this.labelPhone.Name = "labelPhone";
-			this.labelPhone.Size = new System.Drawing.Size(141, 37);
+			this.labelPhone.Size = new System.Drawing.Size(104, 26);
 			this.labelPhone.TabIndex = 14;
 			this.labelPhone.Text = "Телефон";
 			// 
 			// HumanForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1024, 514);
+			this.ClientSize = new System.Drawing.Size(683, 334);
 			this.Controls.Add(this.labelPhone);
 			this.Controls.Add(this.labelEmail);
 			this.Controls.Add(this.rtbPhone);
@@ -231,7 +216,6 @@
 			this.Controls.Add(this.labelID);
 			this.Controls.Add(this.labelLastNAme);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "HumanForm";
 			this.Text = "human";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();

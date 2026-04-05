@@ -35,44 +35,79 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
 			this.SuspendLayout();
 			// 
+			// label2BirthDate
+			// 
+			this.label2BirthDate.Location = new System.Drawing.Point(26, 149);
+			// 
 			// buttonPhoto
 			// 
-			this.buttonPhoto.Location = new System.Drawing.Point(680, 348);
-			this.buttonPhoto.Size = new System.Drawing.Size(233, 53);
+			this.buttonPhoto.Location = new System.Drawing.Point(453, 226);
+			this.buttonPhoto.Margin = new System.Windows.Forms.Padding(2);
+			this.buttonPhoto.Size = new System.Drawing.Size(155, 34);
 			// 
 			// pictureBoxPhoto
 			// 
 			this.pictureBoxPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.pictureBoxPhoto.Size = new System.Drawing.Size(233, 313);
+			this.pictureBoxPhoto.Margin = new System.Windows.Forms.Padding(2);
+			this.pictureBoxPhoto.Size = new System.Drawing.Size(156, 204);
+			// 
+			// rtbLastNAme
+			// 
+			this.rtbLastNAme.Location = new System.Drawing.Point(202, 43);
+			this.rtbLastNAme.Margin = new System.Windows.Forms.Padding(2);
+			this.rtbLastNAme.Size = new System.Drawing.Size(231, 18);
+			// 
+			// rtbFirstName
+			// 
+			this.rtbFirstName.Location = new System.Drawing.Point(202, 78);
+			this.rtbFirstName.Margin = new System.Windows.Forms.Padding(2);
+			this.rtbFirstName.Size = new System.Drawing.Size(231, 18);
+			// 
+			// rtbMiddleNAme
+			// 
+			this.rtbMiddleNAme.Location = new System.Drawing.Point(202, 113);
+			this.rtbMiddleNAme.Margin = new System.Windows.Forms.Padding(2);
+			this.rtbMiddleNAme.Size = new System.Drawing.Size(231, 18);
+			// 
+			// dtpBirthDate
+			// 
+			this.dtpBirthDate.Location = new System.Drawing.Point(202, 148);
+			this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			// 
 			// rtbEmail
 			// 
-			this.rtbEmail.Location = new System.Drawing.Point(298, 289);
+			this.rtbEmail.Location = new System.Drawing.Point(202, 197);
+			this.rtbEmail.Margin = new System.Windows.Forms.Padding(2);
+			this.rtbEmail.Size = new System.Drawing.Size(231, 18);
 			// 
 			// rtbPhone
 			// 
-			this.rtbPhone.Location = new System.Drawing.Point(296, 347);
+			this.rtbPhone.Location = new System.Drawing.Point(202, 232);
+			this.rtbPhone.Margin = new System.Windows.Forms.Padding(2);
+			this.rtbPhone.Size = new System.Drawing.Size(231, 18);
 			// 
 			// labelEmail
 			// 
-			this.labelEmail.Location = new System.Drawing.Point(191, 289);
+			this.labelEmail.Location = new System.Drawing.Point(131, 188);
+			this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			// 
 			// labelPhone
 			// 
-			this.labelPhone.Location = new System.Drawing.Point(143, 348);
+			this.labelPhone.Location = new System.Drawing.Point(92, 226);
+			this.labelPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			// 
 			// labelID
 			// 
-			this.labelID.Location = new System.Drawing.Point(34, 571);
+			this.labelID.Location = new System.Drawing.Point(23, 371);
+			this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.label1.Location = new System.Drawing.Point(170, 418);
-			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label1.Location = new System.Drawing.Point(113, 272);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(114, 37);
+			this.label1.Size = new System.Drawing.Size(83, 26);
 			this.label1.TabIndex = 11;
 			this.label1.Text = "Группа";
 			// 
@@ -81,19 +116,19 @@
 			this.cbStudentsGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbStudentsGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
 			this.cbStudentsGroup.FormattingEnabled = true;
-			this.cbStudentsGroup.Location = new System.Drawing.Point(303, 414);
-			this.cbStudentsGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.cbStudentsGroup.Location = new System.Drawing.Point(202, 267);
 			this.cbStudentsGroup.Name = "cbStudentsGroup";
-			this.cbStudentsGroup.Size = new System.Drawing.Size(344, 45);
+			this.cbStudentsGroup.Size = new System.Drawing.Size(231, 33);
 			this.cbStudentsGroup.TabIndex = 12;
 			// 
 			// buttonOK
 			// 
 			this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.buttonOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.buttonOK.Location = new System.Drawing.Point(441, 560);
+			this.buttonOK.Location = new System.Drawing.Point(294, 364);
+			this.buttonOK.Margin = new System.Windows.Forms.Padding(2);
 			this.buttonOK.Name = "buttonOK";
-			this.buttonOK.Size = new System.Drawing.Size(233, 48);
+			this.buttonOK.Size = new System.Drawing.Size(155, 31);
 			this.buttonOK.TabIndex = 13;
 			this.buttonOK.Text = "OK";
 			this.buttonOK.UseVisualStyleBackColor = true;
@@ -103,23 +138,24 @@
 			// 
 			this.buttonCancwl.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.buttonCancwl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-			this.buttonCancwl.Location = new System.Drawing.Point(680, 560);
+			this.buttonCancwl.Location = new System.Drawing.Point(454, 364);
+			this.buttonCancwl.Margin = new System.Windows.Forms.Padding(2);
 			this.buttonCancwl.Name = "buttonCancwl";
-			this.buttonCancwl.Size = new System.Drawing.Size(233, 48);
+			this.buttonCancwl.Size = new System.Drawing.Size(155, 31);
 			this.buttonCancwl.TabIndex = 14;
 			this.buttonCancwl.Text = "Cancel";
 			this.buttonCancwl.UseVisualStyleBackColor = true;
 			// 
 			// StudentForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(949, 636);
+			this.ClientSize = new System.Drawing.Size(633, 413);
 			this.Controls.Add(this.buttonCancwl);
 			this.Controls.Add(this.buttonOK);
 			this.Controls.Add(this.cbStudentsGroup);
 			this.Controls.Add(this.label1);
-			this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "StudentForm";
 			this.Text = "Student";
 			this.Controls.SetChildIndex(this.labelID, 0);
