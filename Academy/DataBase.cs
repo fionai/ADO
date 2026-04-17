@@ -8,7 +8,7 @@ using System.Configuration;
 
 namespace Academy
 {
-	static internal class DataBase
+	static internal class DataBase 
 	{
 		public static DBtools.Connector Connector { get; set; } = new DBtools.Connector
 			(
